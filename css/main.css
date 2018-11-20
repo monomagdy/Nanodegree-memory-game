@@ -1,0 +1,348 @@
+/*Strat of Global Styles*/
+*{
+  box-sizing: border-box;
+  font-family: 'Bungee Inline', cursive;
+}
+
+body {
+  perspective: 1000px;
+  height: 100vh;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*End of Global Styles*/
+
+/* Start of game list*/
+.list-game {
+  max-width: 660px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  color:  #fff;
+}
+
+.list-game:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.list-game .item {
+  width: 25%;
+  float: left;
+}
+
+.moves {
+  font-size: 30px;
+  color: #fff;
+}
+/* end of Game list*/
+
+/* Start of Timer */
+#minutes {
+  font-size: 30px;
+}
+
+#seconds {
+  font-size: 30px;
+}
+/* End of Timer */
+
+
+.star {
+  display: inline-block;
+  font-size: 30px;
+}
+
+/*reset button */
+#btn-refresh {
+  float: right;
+  color: #fff;
+  font-size: 30px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#btn-refresh:hover {
+  transform: rotate(360deg);
+}
+
+#game-time {
+  color: #ed4c5c;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#play-again {
+  position: relative;
+  color: #08c08f;
+  font-size: 30px;
+  display: inline-block;
+  margin-top: 30px;
+  border: 2px solid #08c08f;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+#play-again:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: 0.3s;
+}
+#play-again i{font-size: 28px;color: #08c08f;}
+ #play-again:hover i{color: #fff}
+#play-again:hover {
+  color: #fff;
+  background: #08c08f;
+}
+
+#play-again:hover:after {
+  top: 0;
+}
+
+/*Start of game cards*/
+.deck {
+  max-width: 750px;
+  min-height: 750px;
+  margin: auto;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #eacfc7, #debfcb, #b6cfd8, #c5e6de);
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.card .front {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid #2C3E50;
+  background: #2C3E50;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  backface-visibility: hidden;
+  border-radius:50%;
+}
+
+.card .back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid #ad5581;
+  background: #ad5581;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.card .back i {
+  font-size: 55px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.matched {
+  pointer-events: none;
+}
+
+.matched .back {
+  background: #049372;
+  border: 1px solid #049372;
+  transition: 0.3s;
+}
+
+.flipped.not-matched {
+  transform: translateX(0);
+  -webkit-animation: bounce ease-in-out 1s;
+  animation: bounce ease-in-out 1s;
+}
+
+.not-matched .back {
+  background: #f33d3d;
+  border: 1px solid #f33d3d;
+  transition: 0.3s;
+}
+/*end of game cards*/
+
+
+/*Sucess Message*/
+.success {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  z-index: -9;
+  transition: 0.3s;
+}
+
+.success-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+
+.success i {
+  font-size: 40px;
+  color: #f7b600;
+}
+
+.success h1 {
+  color: #08c08f;
+  font-size: 55px;
+  margin: 0;
+}
+
+.success.show {
+  opacity: 1.9;
+  z-index: 999;
+}
+
+.success.show h1 {
+  -webkit-animation: happy ease-in-out 1s;
+  animation: happy ease-in-out 1s;
+}
+
+/*Animations*/
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  20% {
+    transform: translateX(-10px) rotateY(180deg);
+  }
+  40% {
+    transform: translateX(10px) rotateY(180deg);
+  }
+  60% {
+    transform: translateX(-10px) rotateY(180deg);
+  }
+  80% {
+    transform: translateX(10px) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0) rotateY(180deg);
+  }
+}
+@-webkit-keyframes happy {
+  0% {
+    transform: scale(0.1) rotateX(-45deg);
+  }
+  20% {
+    transform: scale(0.3) rotateX(45deg);
+  }
+  40% {
+    transform: scale(0.5) rotateX(-50deg);
+  }
+  60% {
+    transform: scale(0.7) rotateX(70deg);
+  }
+  80% {
+    transform: scale(0.9) rotateX(-70deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

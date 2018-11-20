@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game -Mona</title>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline%7CCabin+Sketch%7CRighteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--main stylesheet-->
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+<body>
+<!--Start of Game info bar-->
+      <ul class="list list-game">
+          <li class="item">
+              <span class="moves"></span>
+          </li>
+          <li class="item text-center">
+              <span id="minutes">00</span>:<span id="seconds">00</span>
+          </li>
+          <li class="item text-center">
+              <ul class="star-rating">
+                  <li class="star"><i class="fas fa-star star-1" data-rate="1"></i></li>
+                  <li class="star"><i class="fas fa-star star-2" data-rate="2"></i></li>
+                  <li class="star"><i class="fas fa-star star-3" data-rate="3"></i></li>
+              </ul>
+          </li>
+          <li class="item">
+              <a href="#" id="btn-refresh"><i class="fas fa-sync"></i></a>
+          </li>
+      </ul>
+
+<!--End of Game info bar-->
+
+<!--Start of Game body-->
+<div class="deck">
+    <div class="card" data-card="moon">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    <div class="card" data-card="paw">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-paw"></i>
+        </div>
+    </div>
+    <div class="card" data-card="drum">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-drum"></i>
+        </div>
+    </div>
+    <div class="card" data-card="moon">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    <div  class="card" data-card="headphones">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-headphones"></i>
+        </div>
+    </div>
+    <div class="card" data-card="ball">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-basketball-ball"></i>
+        </div>
+    </div>
+    <div class="card" data-card="drum">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-drum"></i>
+        </div>
+    </div>
+    <div class="card" data-card="cannabis">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-cannabis"></i>
+        </div>
+    </div>
+    <div class="card" data-card="headphones">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-headphones"></i>
+        </div>
+    </div>
+    <div class="card" data-card="paw">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-paw"></i>
+        </div>
+    </div>
+    <div class="card" data-card="skull">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-skull"></i>
+        </div>
+    </div>
+    <div class="card" data-card="gem">
+        <div class="front"></div>
+        <div class="back">
+            <i class="far fa-gem"></i>
+        </div>
+    </div>
+    <div class="card" data-card="cannabis">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-cannabis"></i>
+        </div>
+    </div>
+    <div class="card" data-card="skull">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-skull"></i>
+        </div>
+    </div>
+    <div class="card" data-card="ball">
+        <div class="front"></div>
+        <div class="back">
+            <i class="fas fa-basketball-ball"></i>
+        </div>
+    </div>
+    <div class="card" data-card="gem">
+        <div class="front"></div>
+        <div class="back">
+            <i class="far fa-gem"></i>
+        </div>
+    </div>
+</div>
+    <!--End of Game body-->
+
+    <!--Start of Success Message-->
+      <div class="success">
+
+<img src="img\wohoo.png" alt="celebration icon" width="20%">
+
+        <div class="success-content">
+            <h1>Congratulations You Won! <br /> Wohoooo!</h1>
+            <ul class="star-rating">
+                <li class="star"><i class="fas fa-star star-1" data-rate="1"></i></li>
+                <li class="star"><i class="fas fa-star star-2" data-rate="2"></i></li>
+                <li class="star"><i class="fas fa-star star-3" data-rate="3"></i></li>
+            </ul>
+            <a href="#" id="play-again">play Again <i class="fa fa-redo"></i></a>
+        </div>
+    </div>
+    <!--End of Success Message-->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--main JavaScript-->
+    <script src="js/main.js"></script>
+    <!--Font awesome-->
+    <script src="https://use.fontawesome.com/2ca1455d6a.js"></script>
+
+</body>
+
+</html>
